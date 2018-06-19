@@ -1,8 +1,0 @@
-
-.body{
-    composes:  borderColor from "./index2.css";
-    flex: 1;
-    height: 600px;
-    background-image: url('../imgs/bg.png');
-    /*background: url('./imgs/bg.png'); */
-}

@@ -10,6 +10,7 @@ const compiler = webpack(config);
 
 app.use(webpackDevMiddleware(compiler, {
   publicPath: '/',
+  noInfo: true,
   stats: {
     colors: true,
   },

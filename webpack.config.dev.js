@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 const extractLESS = new ExtractTextPlugin('[name].css');
 
@@ -75,6 +76,7 @@ const config = {
       inject: 'body',
     }),
     extractLESS,
+    new OpenBrowserPlugin({url: 'http://localhost:3000/'})
   ],
 };
 

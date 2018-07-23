@@ -1,54 +1,48 @@
 {
-    //使用ESLint推荐扩展
-    "extends": "airbnb",
-    //指定解析器parser
-    "parser": "babel-eslint",
-    //环境
-    "env": {
-        "browser": true,
-        "node": true,
-        "commonjs": true,
-        "es6": true
-    },
-    //全局变量
-    "globals": {
-        "Babel": true,
-        "React": true
-    },
-    //解析参数
-    "parserOptions": {
-        "ecmaVersion": 6, //执行ecmascript版本
-        //"sourceType": "module",//源码所在位置
-        "ecmaFeatures": {
-            "jsx": true
-                //"impliedStrict":true //启用严格模式
-        }
-    },
-    //插件
-    "plugins": [
-        "react"
-    ],
-    "settings": {
-
-    },
-    //规则
-    "rules": {
-        "global-require": "off",
-        "import/no-unresolved": "off",
-        "no-underscore-dangle": "off",
-        "no-new-func": "off",
-        "no-param-reassign": "off",
-        "react/prefer-stateless-function": "off",
-        "react/no-multi-comp": "off",
-        "react/jsx-no-bind": "off",
-        "react/jsx-indent": "off",
-        "react/jsx-first-prop-new-line": "off",
-        "react/jsx-filename-extension": "off",
-        "no-restricted-syntax": "off",
-        "linebreak-style": "off",
-        "object-curly-newline": "off",
-        "guard-for-in": "off",
-        "no-use-before-define": "off",
-        "indent": "off"
+  //指定解析器parser
+  "parser": "babel-eslint",
+  //环境
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  //全局变量
+  "globals": {
+    "Babel": true,
+    "React": true
+  },
+  //解析参数
+  "parserOptions": {
+    "ecmaVersion": 6, //执行ecmascript版本
+    //"sourceType": "module",//源码所在位置
+    "ecmaFeatures": {
+      "jsx": true
+      //"impliedStrict":true //启用严格模式
     }
+  },
+  //插件
+  "plugins": ["react"],
+  "settings": {},
+  //规则
+  "rules": {
+    "global-require": "off",
+    "import/no-unresolved": "off",
+    "no-underscore-dangle": "off",
+    "no-new-func": "off",
+    "no-param-reassign": "off",
+    "react/prefer-stateless-function": "off",
+    "react/no-multi-comp": "off",
+    "react/jsx-no-bind": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-filename-extension": "off",
+    "no-restricted-syntax": "off",
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
+    "guard-for-in": "off",
+    "no-use-before-define": "off",
+    "indent": "off"
+  }
 }

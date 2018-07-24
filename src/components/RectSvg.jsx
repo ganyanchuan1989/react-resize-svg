@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 import ResizeSvgFactory from "./ResizeSvgHOC";
 
+
+
 class RectSvg extends Component {
 	render() {
-    let { cornerActionTriggerRadius, width, height } = this.props;
+		// style 从外部传入
+		let { cornerActionTriggerRadius, width, height, style,className } = this.props;
+		// console.log('className', className);
 		return (
 			<rect
 				x={cornerActionTriggerRadius}
 				y={cornerActionTriggerRadius}
         width={width}
 				height={height}
-				style={{ fill: "red" }}
+				// style={style}
+				className={className}
 			/>
 		);
 	}

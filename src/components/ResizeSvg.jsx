@@ -169,6 +169,8 @@ class ResizeSvg extends Component {
 					cornerActionTriggerRadius,
 					width: w - cornerActionTriggerRadius*2,
 					height: h - cornerActionTriggerRadius*2,
+					style: this.props.style,
+					className: this.props.className,
 				});
 		});
 		return (

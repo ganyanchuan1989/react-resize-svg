@@ -9,7 +9,7 @@ class DiamondSvg extends Component {
     ${width+cornerActionTriggerRadius}, ${height / 2 + cornerActionTriggerRadius} 
     ${width / 2 + cornerActionTriggerRadius},${height + cornerActionTriggerRadius}`;
     
-    console.log(points);
+    // console.log(points);
 		return (
 			<polygon
         points={points}

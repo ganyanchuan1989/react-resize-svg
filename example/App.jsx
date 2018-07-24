@@ -9,9 +9,9 @@ import ParallelogramSvg from "../src/components/ParallelogramSvg";
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div className={style.container}>
 				<h1>React SVG HOC Components</h1>
-				<div id="container" style={{ position: "absolute" }}>
+				<div style={{ position: "absolute" }}>
 					{/* 采用绝对布局方式 */}
 					<RectSvg
 						width="100"

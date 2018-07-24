@@ -90,3 +90,22 @@ export default ResizeSvgHOC(RectSvg);
 	ry="20"
 />
 ```
+
+
+## Q&A
+
+- The container must be absolutely
+
+```JSX
+// container position absolute
+<div style={{ position: "absolute" }}>
+	<RectSvg
+		width="100"
+		height="100"
+		top="10"
+		left="10"
+		style={{ fill: "red" }}
+		className={style.customClass}
+	/>
+</div>
+```

@@ -10,7 +10,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<h1>SVG topographics</h1>
+				<h1>React SVG HOC Components</h1>
 				<div id="container" style={{ position: "absolute" }}>
 					{/* 采用绝对布局方式 */}
 					<RectSvg width="100" height="100" top="10" left="10" style={{fill: 'red'}} className={style.customClass}/>

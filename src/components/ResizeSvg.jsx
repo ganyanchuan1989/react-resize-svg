@@ -160,8 +160,8 @@ class ResizeSvg extends Component {
 		let actionLineClass = classnames(Style.actionTrigger, Style.actionLine);
 		let { cornerActionTriggerRadius, style } = this.state;
 		let { w, h } = style;
-
-		let { children } = this.props;
+		let {width, height, top, left, children, ...otherProps} = this.props; 
+		
 		const childrenWithProps =
 			children &&
 			React.Children.map(children, child => {
@@ -169,8 +169,7 @@ class ResizeSvg extends Component {
 					cornerActionTriggerRadius,
 					width: w - cornerActionTriggerRadius*2,
 					height: h - cornerActionTriggerRadius*2,
-					style: this.props.style,
-					className: this.props.className,
+					...otherProps
 				});
 		});
 		return (

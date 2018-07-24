@@ -12,9 +12,11 @@ class RectSvg extends Component {
 			<rect
 				x={cornerActionTriggerRadius}
 				y={cornerActionTriggerRadius}
+				rx="20" 
+				ry="20"
         width={width}
 				height={height}
-				// style={style}
+				style={style}
 				className={className}
 			/>
 		);

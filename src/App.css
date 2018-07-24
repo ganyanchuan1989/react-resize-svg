@@ -4,7 +4,6 @@
     flex-direction: column;
 }
 
-.rectTest{
-    stroke: 'blue';
+.customClass{
     fill: red;
 }

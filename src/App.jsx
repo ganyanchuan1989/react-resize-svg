@@ -14,7 +14,7 @@ class App extends Component {
 				<h1>SVG topographic</h1>
 				<div id="container" style={{ position: "absolute" }}>
 					{/* 采用绝对布局方式 */}
-					<RectSvg width="100" height="100" top="10" left="10" style={{fill: 'red'}} className={style.rectTest}/>
+					<RectSvg width="100" height="100" top="10" left="10" style={{fill: 'red'}} className={style.customClass}/>
 					<EllipseSvg width="100" height="80" top="10" left="130" />
           <DiamondSvg width="100" height="100" top="10" left="250" />
           <TriangleSvg width="100" height="100" top="10" left="400" />

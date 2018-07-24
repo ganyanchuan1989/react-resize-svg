@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-// import PropTypes from 'prop-types';
 import style from "./App.css";
-import ResizeSvg from "./components/ResizeSvg";
-import RectSvg from "./components/RectSvg";
-import EllipseSvg from "./components/EllipseSvg";
-import DiamondSvg from "./components/DiamondSvg";
-import TriangleSvg from './components/TriangleSvg';
-import ParallelogramSvg from './components/ParallelogramSvg';
+import RectSvg from "../src/components/RectSvg";
+import EllipseSvg from "../src/components/EllipseSvg";
+import DiamondSvg from "../src/components/DiamondSvg";
+import TriangleSvg from '../src/components/TriangleSvg';
+import ParallelogramSvg from '../src/components/ParallelogramSvg';
 
 class App extends Component {
 	render() {
@@ -25,8 +23,4 @@ class App extends Component {
 		);
 	}
 }
-App.propTypes = {
-	// name: PropTypes.string,
-};
-
 export default App;

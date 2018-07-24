@@ -12,7 +12,7 @@ const config = {
     'webpack-hot-middleware/client?reload=true',
     'react-hot-loader/patch',
     'webpack/hot/only-dev-server',
-    './src/index.jsx',
+    './example/index.jsx',
 
   ],
   devtool: 'eval-source-map',

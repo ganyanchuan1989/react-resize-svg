@@ -1,0 +1,56 @@
+.svgContainer{
+    left: 0;
+    top: 0;
+    position: relative;
+    position: absolute;
+}
+.showLine{
+    stroke: red;
+    stroke-dasharray: 5,5;
+    stroke-width: 1;
+}
+.showCircle{
+    /* stroke="#0000FF" stroke-width="1" fill="#CCCCFF" class="topLeftDrawing"  */
+    stroke: #0000ff;
+    stroke-width: 1;
+    fill: #ccccff;
+    opacity: 1;
+}
+
+.actionLine {
+    stroke: red;
+    stroke-width: 5;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.actionLine:hover{
+    transition: opacity 0.3s;
+    opacity: 0.3;
+}
+
+.actionCircle{
+    stroke-width: 0;
+    fill: #000;
+    fill-opacity: 0.5;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.actionCircle:hover{
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.moveRect{
+    stroke-width: 0;
+    fill: #000;
+    fill-opacity: 0.5;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.moveRect:hover{
+    cursor: move;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}

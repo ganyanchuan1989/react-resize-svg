@@ -6,16 +6,16 @@ import ResizeSvgHOC from "./ResizeSvgHOC";
 class RectSvg extends Component {
 	render() {
 		// style 从外部传入
-		let { cornerActionTriggerRadius, width, height, style,className } = this.props;
+		let { padding, contentWidth, contentHeight, style,className } = this.props;
 		// console.log('className', className);
 		return (
 			<rect
-				x={cornerActionTriggerRadius}
-				y={cornerActionTriggerRadius}
+				x={padding}
+				y={padding}
 				rx="20" 
 				ry="20"
-        width={width}
-				height={height}
+        width={contentWidth}
+				height={contentHeight}
 				style={style}
 				className={className}
 			/>

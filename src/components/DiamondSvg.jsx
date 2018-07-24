@@ -3,11 +3,11 @@ import ResizeSvgHOC from "./ResizeSvgHOC";
 
 class DiamondSvg extends Component {
 	render() {
-		let { cornerActionTriggerRadius, width, height } = this.props;
-    let points = `${cornerActionTriggerRadius},${height / 2 +cornerActionTriggerRadius} 
-    ${width / 2 + cornerActionTriggerRadius},${cornerActionTriggerRadius} 
-    ${width+cornerActionTriggerRadius}, ${height / 2 + cornerActionTriggerRadius} 
-    ${width / 2 + cornerActionTriggerRadius},${height + cornerActionTriggerRadius}`;
+		let { padding, contentWidth, contentHeight } = this.props;
+    let points = `${padding},${contentHeight / 2 +padding} 
+    ${contentWidth / 2 + padding},${padding} 
+    ${contentWidth+padding}, ${contentHeight / 2 + padding} 
+    ${contentWidth / 2 + padding},${contentHeight + padding}`;
     
     // console.log(points);
 		return (

@@ -27,7 +27,7 @@ class ResizeSvg extends Component {
 		left = parseInt(left);
 		
 		this.state = {
-			cornerActionTriggerRadius: 8, // 拖拽缩放大圆直径
+			padding: 8, // padding
 			style: {
 				left: left || 0,
 				top: top || 0,
@@ -131,14 +131,14 @@ class ResizeSvg extends Component {
 	}
 
 	updateSize(deltaWidth, deltaHeight) {
-		let { cornerActionTriggerRadius, style } = this.state;
+		let { padding, style } = this.state;
 		let { w, h } = style;
 
 		let newWidth = w + deltaWidth;
 		let newHeight = h + deltaHeight;
 
 		// Don't allow a too small size.
-		let minumalSize = cornerActionTriggerRadius * 2;
+		let minumalSize = padding * 2;
 		if (newWidth < minumalSize) {
 			newWidth = minumalSize;
 		}
@@ -158,7 +158,7 @@ class ResizeSvg extends Component {
   
 	render() {
 		let actionLineClass = classnames(Style.actionTrigger, Style.actionLine);
-		let { cornerActionTriggerRadius, style } = this.state;
+		let { padding, style } = this.state;
 		let { w, h } = style;
 		let {width, height, top, left, children, ...otherProps} = this.props; 
 		
@@ -166,9 +166,11 @@ class ResizeSvg extends Component {
 			children &&
 			React.Children.map(children, child => {
 				return React.cloneElement(child, {
-					cornerActionTriggerRadius,
-					width: w - cornerActionTriggerRadius*2,
-					height: h - cornerActionTriggerRadius*2,
+					padding,
+					contentWidth: w - padding*2,
+					contentHeight: h - padding*2,
+					width: w,
+					height: h,
 					...otherProps
 				});
 		});
@@ -183,59 +185,59 @@ class ResizeSvg extends Component {
 				{/* 四条显示的边框：虚线 */}
 				<g id="gShowLine" className={Style.showLine}>
 					<line
-						x1={cornerActionTriggerRadius}
-						y1={cornerActionTriggerRadius}
-						x2={`${w - cornerActionTriggerRadius}px`}
-						y2={cornerActionTriggerRadius}
+						x1={padding}
+						y1={padding}
+						x2={`${w - padding}px`}
+						y2={padding}
 					/>
 					<line
-						x1={`${w - cornerActionTriggerRadius}px`}
-						y1={cornerActionTriggerRadius}
-						x2={`${w - cornerActionTriggerRadius}px`}
-						y2={`${h - cornerActionTriggerRadius}px`}
+						x1={`${w - padding}px`}
+						y1={padding}
+						x2={`${w - padding}px`}
+						y2={`${h - padding}px`}
 					/>
 					<line
-						x1={`${w - cornerActionTriggerRadius}px`}
-						y1={`${h - cornerActionTriggerRadius}px`}
-						x2={cornerActionTriggerRadius}
-						y2={`${h - cornerActionTriggerRadius}px`}
+						x1={`${w - padding}px`}
+						y1={`${h - padding}px`}
+						x2={padding}
+						y2={`${h - padding}px`}
 					/>
 					<line
-						x1={cornerActionTriggerRadius}
-						y1={`${h - cornerActionTriggerRadius}px`}
-						x2={cornerActionTriggerRadius}
-						y2={cornerActionTriggerRadius}
+						x1={padding}
+						y1={`${h - padding}px`}
+						x2={padding}
+						y2={padding}
 					/>
 				</g>
 				<g id="gShowCircle" className={Style.showCircle}>
 					<circle
-						cx={cornerActionTriggerRadius}
-						cy={cornerActionTriggerRadius}
-						r={cornerActionTriggerRadius / 2}
+						cx={padding}
+						cy={padding}
+						r={padding / 2}
 					/>
 					<circle
-						cx={`${w - cornerActionTriggerRadius}px`}
-						cy={cornerActionTriggerRadius}
-						r={cornerActionTriggerRadius / 2}
+						cx={`${w - padding}px`}
+						cy={padding}
+						r={padding / 2}
 					/>
 					<circle
-						cx={`${w - cornerActionTriggerRadius}px`}
-						cy={`${h - cornerActionTriggerRadius}px`}
-						r={cornerActionTriggerRadius / 2}
+						cx={`${w - padding}px`}
+						cy={`${h - padding}px`}
+						r={padding / 2}
 					/>
 					<circle
-						cx={cornerActionTriggerRadius}
-						cy={`${h - cornerActionTriggerRadius}px`}
-						r={cornerActionTriggerRadius / 2}
+						cx={padding}
+						cy={`${h - padding}px`}
+						r={padding / 2}
 					/>
 				</g>
 
 				<g id="gMoveRect">
 					<rect
-						x={cornerActionTriggerRadius}
-						y={cornerActionTriggerRadius}
-						width={`${w - cornerActionTriggerRadius * 2}px`}
-						height={`${h - cornerActionTriggerRadius * 2}px`}
+						x={padding}
+						y={padding}
+						width={`${w - padding * 2}px`}
+						height={`${h - padding * 2}px`}
 						className={Style.moveRect}
 						onMouseDown={() => {
 							this.mouseDownHandler(ActionType.Move);
@@ -245,10 +247,10 @@ class ResizeSvg extends Component {
 
 				<g id="gActionLine">
 					<line
-						x1={cornerActionTriggerRadius}
-						y1={cornerActionTriggerRadius}
-						x2={`${w - cornerActionTriggerRadius}px`}
-						y2={cornerActionTriggerRadius}
+						x1={padding}
+						y1={padding}
+						x2={`${w - padding}px`}
+						y2={padding}
 						style={{ cursor: "n-resize" }}
 						className={Style.actionLine}
 						onMouseDown={() => {
@@ -256,10 +258,10 @@ class ResizeSvg extends Component {
 						}}
 					/>
 					<line
-						x1={`${w - cornerActionTriggerRadius}px`}
-						y1={cornerActionTriggerRadius}
-						x2={`${w - cornerActionTriggerRadius}px`}
-						y2={`${h - cornerActionTriggerRadius}px`}
+						x1={`${w - padding}px`}
+						y1={padding}
+						x2={`${w - padding}px`}
+						y2={`${h - padding}px`}
 						style={{ cursor: "e-resize" }}
 						className={Style.actionLine}
 						onMouseDown={() => {
@@ -267,10 +269,10 @@ class ResizeSvg extends Component {
 						}}
 					/>
 					<line
-						x1={`${w - cornerActionTriggerRadius}px`}
-						y1={`${h - cornerActionTriggerRadius}px`}
-						x2={cornerActionTriggerRadius}
-						y2={`${h - cornerActionTriggerRadius}px`}
+						x1={`${w - padding}px`}
+						y1={`${h - padding}px`}
+						x2={padding}
+						y2={`${h - padding}px`}
 						style={{ cursor: "s-resize" }}
 						className={Style.actionLine}
 						onMouseDown={() => {
@@ -278,10 +280,10 @@ class ResizeSvg extends Component {
 						}}
 					/>
 					<line
-						x1={cornerActionTriggerRadius}
-						y1={`${h - cornerActionTriggerRadius}px`}
-						x2={cornerActionTriggerRadius}
-						y2={cornerActionTriggerRadius}
+						x1={padding}
+						y1={`${h - padding}px`}
+						x2={padding}
+						y2={padding}
 						style={{ cursor: "w-resize" }}
 						className={Style.actionLine}
 						onMouseDown={() => {
@@ -292,36 +294,36 @@ class ResizeSvg extends Component {
 
 				<g id="gActionCircle" className={Style.actionCircle}>
 					<circle
-						cx={cornerActionTriggerRadius}
-						cy={cornerActionTriggerRadius}
-						r={cornerActionTriggerRadius}
+						cx={padding}
+						cy={padding}
+						r={padding}
 						style={{ cursor: "nw-resize" }}
 						onMouseDown={() => {
 							this.mouseDownHandler(ActionType.TopLeftResize);
 						}}
 					/>
 					<circle
-						cx={`${w - cornerActionTriggerRadius}px`}
-						cy={cornerActionTriggerRadius}
-						r={cornerActionTriggerRadius}
+						cx={`${w - padding}px`}
+						cy={padding}
+						r={padding}
 						style={{ cursor: "ne-resize" }}
 						onMouseDown={() => {
 							this.mouseDownHandler(ActionType.TopRightResize);
 						}}
 					/>
 					<circle
-						cx={`${w - cornerActionTriggerRadius}px`}
-						cy={`${h - cornerActionTriggerRadius}px`}
-						r={cornerActionTriggerRadius}
+						cx={`${w - padding}px`}
+						cy={`${h - padding}px`}
+						r={padding}
 						style={{ cursor: "se-resize" }}
 						onMouseDown={() => {
 							this.mouseDownHandler(ActionType.BottomRightResize);
 						}}
 					/>
 					<circle
-						cx={cornerActionTriggerRadius}
-						cy={`${h - cornerActionTriggerRadius}px`}
-						r={cornerActionTriggerRadius}
+						cx={padding}
+						cy={`${h - padding}px`}
+						r={padding}
 						style={{ cursor: "sw-resize" }}
 						onMouseDown={() => {
 							this.mouseDownHandler(ActionType.BottomLeftResize);

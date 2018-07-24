@@ -5,11 +5,11 @@ import ResizeSvgHOC from "./ResizeSvgHOC";
 let len = 20;
 class ParallelogramSvg extends Component {
   render() {
-    let { cornerActionTriggerRadius, width, height } = this.props;
-    let points = `${cornerActionTriggerRadius},${height + cornerActionTriggerRadius} 
-    ${cornerActionTriggerRadius + 20},${cornerActionTriggerRadius} 
-    ${width + cornerActionTriggerRadius}, ${cornerActionTriggerRadius} 
-    ${width + cornerActionTriggerRadius - 20},${height + cornerActionTriggerRadius}`;
+    let { padding, contentWidth, contentHeight } = this.props;
+    let points = `${padding},${contentHeight + padding} 
+    ${padding + 20},${padding} 
+    ${contentWidth + padding}, ${padding} 
+    ${contentWidth + padding - 20},${contentHeight + padding}`;
 
     return (
       <polygon

@@ -3,13 +3,13 @@ import ResizeSvgHOC from "./ResizeSvgHOC";
 
 class EllipseSvg extends Component {
 	render() {
-    let { cornerActionTriggerRadius, width, height } = this.props;
+    let { padding, contentWidth, contentHeight } = this.props;
 		return (
 			<ellipse
-				cx={width / 2 + cornerActionTriggerRadius}
-        cy={height / 2 + cornerActionTriggerRadius}
-        rx={width/2}
-        ry={height/2}
+				cx={contentWidth / 2 + padding}
+        cy={contentHeight / 2 + padding}
+        rx={contentWidth/2}
+        ry={contentHeight/2}
 				style={{ fill: "green" }}
 			/>
 		);

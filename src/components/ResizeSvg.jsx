@@ -20,16 +20,17 @@ class ResizeSvg extends Component {
 	constructor(props) {
 		super();
 
-		let { width, height } = props;
-
+		let { width, height,top, left } = props;
 		width = parseInt(width);
 		height = parseInt(height);
+		top = parseInt(top);
+		left = parseInt(left);
 		
 		this.state = {
 			cornerActionTriggerRadius: 8, // 拖拽缩放大圆直径
 			style: {
-				left: 0,
-				top: 0,
+				left: left || 0,
+				top: top || 0,
 				w: width || 100,
 				h: height || 100,
 				width: `${width || 100}px`,
@@ -154,30 +155,6 @@ class ResizeSvg extends Component {
 
 		this.setState({ style: newStyle });
 	}
-
-  renderRect(child){
-    let {style,cornerActionTriggerRadius  } = this.state;
-		let { w, h } = style;
-		
-    return React.cloneElement(child, {
-      x: cornerActionTriggerRadius,
-      y: cornerActionTriggerRadius,
-      width: `${w - cornerActionTriggerRadius*2}px`,
-      height: `${h - cornerActionTriggerRadius*2}px`,
-    });
-  }
-
-  renderEllipse(child){
-    let {style, cornerActionTriggerRadius  } = this.state;
-    let { w, h } = style;
-
-    return React.cloneElement(child, {
-      cx: `${(w)/2}px`,
-      cy:  `${(h)/2}px`,
-      rx: `${(w)/2 - cornerActionTriggerRadius}px`,
-      ry: `${(h)/2 - cornerActionTriggerRadius}px`,
-    });
-  }
   
 	render() {
 		let actionLineClass = classnames(Style.actionTrigger, Style.actionLine);
@@ -188,13 +165,12 @@ class ResizeSvg extends Component {
 		const childrenWithProps =
 			children &&
 			React.Children.map(children, child => {
-        if(child.type.displayName == "EllipseSvg"){
-          return this.renderEllipse(child);
-        } else if(child.type.displayName == "RectSvg"){
-          return this.renderRect(child);
-        }
-			});
-
+				return React.cloneElement(child, {
+					cornerActionTriggerRadius,
+					width: w - cornerActionTriggerRadius*2,
+					height: h - cornerActionTriggerRadius*2,
+				});
+		});
 		return (
 			<svg
 				className={Style.svgContainer}

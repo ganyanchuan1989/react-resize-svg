@@ -9,7 +9,7 @@ export default function ResizeSvgHOC(WrapperComponent){
     render(){
       return (
         <ResizeSvg {...this.props}>
-          <WrapperComponent {...this.props} />
+          <WrapperComponent/>
         </ResizeSvg>
       )
     }

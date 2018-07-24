@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ResizeSvgFactory from "./ResizeSvgHOC";
+import ResizeSvgHOC from "./ResizeSvgHOC";
 
 
 
@@ -23,4 +23,4 @@ class RectSvg extends Component {
 	}
 }
 
-export default ResizeSvgFactory(RectSvg);
+export default ResizeSvgHOC(RectSvg);

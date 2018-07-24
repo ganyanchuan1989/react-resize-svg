@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ResizeSvgFactory from "./ResizeSvgHOC";
+import ResizeSvgHOC from "./ResizeSvgHOC";
 
 class DiamondSvg extends Component {
 	render() {
@@ -19,4 +19,4 @@ class DiamondSvg extends Component {
 	}
 }
 
-export default ResizeSvgFactory(DiamondSvg);
+export default ResizeSvgHOC(DiamondSvg);

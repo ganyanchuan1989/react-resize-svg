@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import ResizeSvgHOC from "./ResizeSvgHOC";
 
-class TriangleSvg extends Component {
+
+let len = 20;
+class ParallelogramSvg extends Component {
   render() {
     let { cornerActionTriggerRadius, width, height } = this.props;
-
     let points = `${cornerActionTriggerRadius},${height + cornerActionTriggerRadius} 
-      ${width / 2 + cornerActionTriggerRadius},${cornerActionTriggerRadius} 
-      ${width + cornerActionTriggerRadius}, ${height + cornerActionTriggerRadius} `;
+    ${cornerActionTriggerRadius + 20},${cornerActionTriggerRadius} 
+    ${width + cornerActionTriggerRadius}, ${cornerActionTriggerRadius} 
+    ${width + cornerActionTriggerRadius - 20},${height + cornerActionTriggerRadius}`;
 
     return (
       <polygon
@@ -18,4 +20,4 @@ class TriangleSvg extends Component {
   }
 }
 
-export default ResizeSvgHOC(TriangleSvg);
+export default ResizeSvgHOC(ParallelogramSvg);

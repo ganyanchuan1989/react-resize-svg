@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ResizeSvgFactory from "./ResizeSvgHOC";
+import ResizeSvgHOC from "./ResizeSvgHOC";
 
 class EllipseSvg extends Component {
 	render() {
@@ -16,4 +16,4 @@ class EllipseSvg extends Component {
 	}
 }
 
-export default ResizeSvgFactory(EllipseSvg);
+export default ResizeSvgHOC(EllipseSvg);

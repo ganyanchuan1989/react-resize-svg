@@ -6,6 +6,7 @@ import RectSvg from "./components/RectSvg";
 import EllipseSvg from "./components/EllipseSvg";
 import DiamondSvg from "./components/DiamondSvg";
 import TriangleSvg from './components/TriangleSvg';
+import ParallelogramSvg from './components/ParallelogramSvg';
 
 class App extends Component {
 	render() {
@@ -18,6 +19,7 @@ class App extends Component {
 					<EllipseSvg width="100" height="80" top="10" left="130" />
           <DiamondSvg width="100" height="100" top="10" left="250" />
           <TriangleSvg width="100" height="100" top="10" left="400" />
+					<ParallelogramSvg width="100" height="100" top="10" left="550"/>
 				</div>
 			</div>
 		);

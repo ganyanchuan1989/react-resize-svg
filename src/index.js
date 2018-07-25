@@ -1,3 +1,4 @@
+import ResizeSvg from './components/ResizeSvg';
 import ResizeSvgHOC from './components/ResizeSvgHOC'
 import EllipseSvg from './components/EllipseSvg'
 import RectSvg from "./components/RectSvg";
@@ -7,6 +8,7 @@ import ParallelogramSvg from "./components/ParallelogramSvg";
 
 
 export {
+  ResizeSvg,
   ResizeSvgHOC,
   EllipseSvg,
   RectSvg,

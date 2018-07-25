@@ -3,7 +3,7 @@ import style from "./App.css";
 
 import {ResizeSvg, EllipseSvg, DiamondSvg, TriangleSvg, ParallelogramSvg, RectSvg} from "react-resize-svg";
 
-console.log(EllipseSvg);
+console.log(ResizeSvg);
 class App extends Component {
 	render() {
 		return (

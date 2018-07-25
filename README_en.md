@@ -148,6 +148,8 @@ After exporting components using `ResizeSvgHOC`, three new props will be added: 
 
 ## Development
 
+- dev
+
 ```
 git clone 
 
@@ -155,3 +157,12 @@ npm i
 
 npm run start
 ```
+
+- build
+
+```
+npm run build
+```
+
+![](./docs/analyzer.jpg)
+

@@ -151,6 +151,8 @@ export default ResizeSvgHOC(EllipseSvg);
 
 ## 开发调试
 
+- 开发
+
 ```
 git clone 
 
@@ -158,3 +160,13 @@ npm i
 
 npm run start
 ```
+
+- 发布
+
+```
+npm run build
+```
+
+![](./docs/analyzer.jpg)
+
+

@@ -1,8 +1,9 @@
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-
 const extractCSS = new ExtractTextPlugin("[name]-[contenthash:8].css");
+
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const config = {
 	entry: {
@@ -21,9 +22,10 @@ const config = {
 		extensions: [".js", ".jsx"]
 	},
 	externals: {
-		react: "React",
-		"react-dom": "ReactDOM"
-	},
+      'react': 'React',
+			'react-dom': 'ReactDOM',
+			'prop-types': 'PropTypes',
+  },
 	module: {
 		rules: [
 			{
@@ -72,7 +74,8 @@ const config = {
 				NODE_ENV: JSON.stringify("production")
 			}
     }),
-    extractCSS,
+		extractCSS,
+		// new BundleAnalyzerPlugin(),
 	]
 };
 

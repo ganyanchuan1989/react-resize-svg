@@ -174,7 +174,6 @@ class ResizeSvg extends Component {
 			...otherProps
 		} = this.props; 
 		
-		console.log('showCircleStyle:', showCircleStyle);
 		const childrenWithProps =
 			children &&
 			React.Children.map(children, child => {

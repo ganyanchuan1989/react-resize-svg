@@ -22,9 +22,8 @@ const config = {
 		extensions: [".js", ".jsx"]
 	},
 	externals: {
-      'react': 'React',
-			'react-dom': 'ReactDOM',
-			'prop-types': 'PropTypes',
+      'react': 'react',
+			'react-dom': 'react-dom',
   },
 	module: {
 		rules: [

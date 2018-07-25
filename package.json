@@ -8,7 +8,8 @@
         "lint-fix": "eslint  --fix --ext .js, .jsx src",
         "babel": "babel src --out-dir lib",
         "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --color --env.build=build",
-        "analyzer": "cross-env NODE_ENV=production webpack --config webpack.config.js --env.analyzer=analyzer "
+        "analyzer": "cross-env NODE_ENV=production webpack --config webpack.config.js --env.analyzer=analyzer ",
+        "site": "cross-env NODE_ENV=production webpack --config webpack.config.site.js --progress --color"
     },
     "main": "./dist/index.js",
     "module": "./src/index.js",

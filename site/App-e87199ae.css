@@ -1,0 +1,21 @@
+*{margin: 0;padding: 0}
+.App__container--2P4qc{
+    /* style={{width: '900px', margin: 'auto', textAlign: 'center'}}
+    wi */
+    width: 900px;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.App__container--2P4qc h1{
+    padding: 30px;
+}
+
+.App__customClass--2f9Pr{
+    fill: red;
+}
+.App__customShowCircle--3vv5t{
+    stroke: green !important ;
+    fill: red !important ;
+}
+/*# sourceMappingURL=App-e87199ae.css.map*/

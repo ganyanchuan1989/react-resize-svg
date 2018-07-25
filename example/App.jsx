@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import style from "./App.css";
-import RectSvg from "../src/components/RectSvg";
-import EllipseSvg from "../src/components/EllipseSvg";
-import DiamondSvg from "../src/components/DiamondSvg";
-import TriangleSvg from "../src/components/TriangleSvg";
-import ParallelogramSvg from "../src/components/ParallelogramSvg";
+
+import {EllipseSvg, DiamondSvg, TriangleSvg, ParallelogramSvg, RectSvg} from "react-native-svg";
 
 class App extends Component {
 	render() {

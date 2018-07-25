@@ -14,3 +14,7 @@
 .customClass{
     fill: red;
 }
+.customShowCircle{
+    stroke: green !important ;
+    fill: red !important ;
+}

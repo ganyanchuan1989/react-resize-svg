@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import style from "./App.css";
 
-// import {DiamondSvg, TriangleSvg, ParallelogramSvg, RectSvg} from "react-native-svg";
-
-import { EllipseSvg } from "react-resize-svg";
+import {EllipseSvg, DiamondSvg, TriangleSvg, ParallelogramSvg, RectSvg} from "react-resize-svg";
 
 console.log(EllipseSvg);
 class App extends Component {
@@ -13,7 +11,7 @@ class App extends Component {
 				<h1>React SVG HOC Components</h1>
 				<div style={{ position: "absolute" }}>
 					{/* 采用绝对布局方式 */}
-					{/* <RectSvg
+					<RectSvg
 						width="100"
 						height="100"
 						top="10"
@@ -39,8 +37,8 @@ class App extends Component {
 						height="100"
 						top="10"
 						left="550"
-					/> */}
-					<EllipseSvg width="100" height="80" top="10" left="130" />
+						showCircleStyle={style.customShowCircle}
+					/>
 				</div>
 			</div>
 		);

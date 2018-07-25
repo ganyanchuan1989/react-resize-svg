@@ -15,6 +15,10 @@
     "productName": "react-resize-svg",
     "author": "ganxunzou@163.com",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ganxunzou/react-resize-svg"
+    },
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-eslint": "^8.0.1",

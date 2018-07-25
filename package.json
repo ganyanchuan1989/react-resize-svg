@@ -9,6 +9,8 @@
         "babel": "babel src --out-dir lib",
         "build": "webpack --config webpack.config.build.js --progress --color "
     },
+    "main":"./dist/index.js",
+    "module":"./src/index.js",
     "productName": "react-resize-svg",
     "author": "ganxunzou@163.com",
     "license": "MIT",

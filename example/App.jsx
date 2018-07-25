@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import style from "./App.css";
 
-import {EllipseSvg, DiamondSvg, TriangleSvg, ParallelogramSvg, RectSvg} from "react-resize-svg";
+import {ResizeSvg, EllipseSvg, DiamondSvg, TriangleSvg, ParallelogramSvg, RectSvg} from "react-resize-svg";
 
 console.log(EllipseSvg);
 class App extends Component {

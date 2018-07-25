@@ -48,6 +48,13 @@ Wrapped components by `ResizeSvgHOC` will auto inject Props
 
 ### Use 
 
+- npm install 
+
+```
+npm install react-resize-svg
+
+```
+
 - Custom SVG Component 
 
 Develop a custom svg component based on `ResizeSvgHOC`. E.g:

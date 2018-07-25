@@ -50,6 +50,13 @@ ResizeSvg 如下图显示，分为两块部分：操作区域（ResizeWidth）�
 
 ### 使用
 
+- npm 安装
+
+```
+npm install react-resize-svg
+
+```
+
 - 开发组件
 
 基于`ResizeSvgHOC` 开发一个自定义的图形组件。例如：

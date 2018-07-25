@@ -30,7 +30,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias:{
-      'react-native-svg': path.resolve(__dirname, './src/index.js')
+      //'react-resize-svg': path.resolve(__dirname, './src/index.js')
     }
   },
   module: {

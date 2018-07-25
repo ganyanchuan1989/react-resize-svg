@@ -6,7 +6,8 @@
         "start": "node server.js",
         "lint": "eslint --ext .js, .jsx src",
         "lint-fix": "eslint  --fix --ext .js, .jsx src",
-        "babel": "babel src --out-dir lib"
+        "babel": "babel src --out-dir lib",
+        "build": "webpack --config webpack.config.build.js --progress --color "
     },
     "productName": "react-resize-svg",
     "author": "ganxunzou@163.com",

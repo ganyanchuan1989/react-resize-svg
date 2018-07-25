@@ -8,6 +8,8 @@ const config = require('./webpack.config.dev.js');
 
 const compiler = webpack(config);
 
+app.use("/", express.static('./static') )
+
 app.use(webpackDevMiddleware(compiler, {
   publicPath: '/',
   noInfo: true,

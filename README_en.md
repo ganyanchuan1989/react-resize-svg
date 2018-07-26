@@ -127,13 +127,15 @@ After exporting components using `ResizeSvgHOC`, three new props will be added: 
 
 ## Q&A
 
-- The parent container that loads the ResizeSvg graphic, `position` must be `absolute`
+- The parent container that loads the ResizeSvg graphic, `position` must be `relative` or `absolute`
+
+Because `ResizeSVG` `position` is `absolute`
 
 > The scaling of the svg affects the size of the layer in which it is located. If the default layout is used, the overall document flow will be affected when the graphic is scaled, thus affecting the position of other graphics.
 
 	```JSX
 	// container position absolute
-	<div style={{ position: "absolute" }}>
+	<div style={{ position: "relative" }}>
 		<RectSvg
 			width="100"
 			height="100"

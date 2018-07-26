@@ -5,7 +5,6 @@ export default function injectStyle(){
   .resize-svg-svg-container{
     left: 0;
     top: 0;
-    position: relative;
     position: absolute;
   }
   .resize-svg-show-line{

@@ -8,7 +8,7 @@ class App extends Component {
 		return (
 			<div className={style.container}>
 				<h1>React SVG HOC Components</h1>
-				<div style={{ position: "absolute" }}>
+				<div style={{ position: "relative" }}>
 					{/* 采用绝对布局方式 */}
 					<RectSvg
 						width="100"

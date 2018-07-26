@@ -130,13 +130,15 @@ export default ResizeSvgHOC(EllipseSvg);
 
 ## Q&A
 
-- 加载ResizeSvg图形的外部容器，`position`必须是`absolute`
+- 加载ResizeSvg图形的外部容器，`position`必须是`relative` 或者 `absolute`
 
-	图形的缩放会影响所在图层的大小，如果采用默认布局，缩放图形的时候，会影响整体文档流，从而影响其他图形的位置。
+因为`ResizeSvg`的`position`是`absolute`
+
+> 图形的缩放会影响所在图层的大小，如果采用默认布局，缩放图形的时候，会影响整体文档流，从而影响其他图形的位置。
 
 	```JSX
 	// container position absolute
-	<div style={{ position: "absolute" }}>
+	<div style={{ position: "relative" }}>
 		<RectSvg
 			width="100"
 			height="100"
